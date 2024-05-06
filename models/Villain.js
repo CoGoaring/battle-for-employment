@@ -16,9 +16,11 @@ Villain.init({
         allowNull:false,
     },
     villain_description: {
-        type:DataTypes.STRING,
+        type:DataTypes.TEXT,
         allowNull:false,
     },
+},
+{
     sequelize,
     timestamps: false,
     freezeTableName: true,

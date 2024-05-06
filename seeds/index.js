@@ -17,9 +17,6 @@ const seedAll = async () => {
     await seedQuestion();
     console.log('\n----- QUESTION SEEDED -----\n');
 
-    await seedAnswer();
-    console.log('\n----- ANSWER SEEDED -----\n');
-
     process.exit(0);
 };
 
