@@ -37,6 +37,13 @@ router.get("/villain/:id", withAuth, async (req, res) => {
         ],
 });
 
+    if(!villainData){
+        res.status(404).json({
+            message: "No villain found in the system!!"
+        });
+         return;
+    }
+
     const villain = villainData.get({ plain: true });
 
     res.render("villain", { villain, loggedIn: req.session.loggedIn});
