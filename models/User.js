@@ -27,12 +27,13 @@ User.init(
         len: [8],
       },
     },
+    progress: {
+      type: DataTypes.INTEGER,
+      defaultValue: 1,
+    },
     health: {
       type: DataTypes.INTEGER,
       defaultValue: 3,
-      validate: {
-        max: 3,
-      },
     },
   },
   {

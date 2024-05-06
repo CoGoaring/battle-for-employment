@@ -12,9 +12,11 @@ router.get("/", withAuth, async (req, res) => {
         const villains = villainData.map((villain) => {
             villain.get({ plain: true })
         });
-
+        const userData = await User.findByPk(req.session.user_id)
+        const user = userData.get({ plain: true })
         res.render("homepage", {
             villains,
+            user,
             loggedIn: req.session.loggedIn,
         });
     }catch(error){
