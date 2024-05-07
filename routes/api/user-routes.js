@@ -1,77 +1,53 @@
 const router = require("express").Router();
-
+// const redis = require('redis');
+// const client = redis.createClient();
 const { User } = require("../../models");
-
 router.post("/", async (req, res) => {
-    try{
+    try {
+        const userData = await User.create(req.body);
+        req.session.save(() => {
+            req.session.username = userData.username;
+            req.session.logged_in = true;
+            client.set('session_username', userData.username);
+            res.status(200).json(userData);
+        });
+    } catch (err) {
+        res.status(400).json({ error: "Failed to create user." });
+    }
+});
+router.post("/login", async (req , res) => {
+    try {
         const userData = await User.findOne({
             where: {
                 username: req.body.username,
-            }
-        });
-        if(userData) {
-            res.status(400).json({
-                message: "Username already in the system!!"
-            });
-            return;
-        }
-        const newUserData = await User.create({
-            username: req.body.username,
-            password: req.body.password,
-        });
-
-        req.session.save(() => {
-            req.session.user_id = newUserData.id,
-            req.session.loggedId = true;
-
-            res.status(200).json(newUserData);
-        });
-    }catch(error){
-        res.status(500).json(error);
-    }
-});
-
-router.post("/login", async (req , res) => {
-    try{
-        const userData = await User.findOne({
-            where:{
-                username: req.body.username,
             },
         });
-        if(!userData){
-            res.status(400).json({
-                message: "Incorrect username or not in the system!!"
-            });
-            return;
-        };
+        if (!userData) {
+            return res.status(400).json({ error: "User not found." });
+        }
         const validPassword = await userData.checkPassword(req.body.password);
-
-        if(!validPassword){
-            res.status(400).json({
-                message: "Inccorect password."
-            });
-            return;
-        };
-
+        if (!validPassword) {
+            return res.status(400).json({ error: "Incorrect password." });
+        }
         req.session.save(() => {
-            req.session.user_id = userData.id,
-            req.session.loggedIn = true;
-
-            res.status(200).json({ user: userData, message: "You are now logged in!!"});
+            req.session.username = userData.username;
+            req.session.logged_in = true;
+            res.json({
+                user: userData,
+                message: "You are now logged in!!",
+            });
         });
-    }catch(error){
-        res.status(500).json(error);
+    } catch (error) {
+        res.status(500).json({ error: "Internal server error." });
     }
 });
-
 router.post("/logout", (req,res) => {
-if(req.session.loggedId){
-    req.session.destroy(() => {
-        res.status(204).end();
-    });
-}else {
-    res.status(404).end();
-}
+    if (req.session.logged_in) {
+        req.session.destroy(() => {
+            res.status(204).end();
+        });
+    } else {
+        res.status(404).json({ error: "No session found." });
+    }
 });
-
 module.exports = router;
