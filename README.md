@@ -26,11 +26,27 @@ Deployed link: TBD
 
 To install dependencies, run these commands:
 
-TBD
+```
+npm install
+```
 
 ## Usage 🏆
 
-TBD
+1. First start the database
+```
+\i schema.sql
+```
+
+2.Seed the database
+```
+npm run seed
+```
+
+3.Run
+```
+npm run start
+```
+4.You need to create an account to use the Page
 
 ## License 📛 
 
@@ -42,7 +58,10 @@ TBD
 
 ## Contributors 😃
 
-TBD
+Erikrainer
+CoGoaring
+Joshyy55
+pandor24
 
 ## Tests 🧪
 
@@ -57,5 +76,7 @@ TBD
 For additional questions, contact me at the email provided below. 
 
 - GitHub: [Erikrainer](https://github.com/Erikrainer/)
-- Email:  rainer.erik70@gmail.com
+- - GitHub: [Urrutia Joshua](https://github.com/Joshyy55)
+- - GitHub: [Kwan Gordon](https://github.com/pandord24)
+- - GitHub: [Connor Goaring](https://github.com/CoGoaring)
 
