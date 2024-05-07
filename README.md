@@ -63,10 +63,10 @@ npm run start
 
 ## Contributors 😃
 
-Erikrainer
-CoGoaring
-Joshyy55
-pandor24
+- CoGoaring
+- Erikrainer
+- Joshyy55
+- pandor24
 
 ## Tests 🧪
 
@@ -80,8 +80,9 @@ TBD
 
 For additional questions, contact me at the email provided below. 
 
+- GitHub: [Connor Goaring](https://github.com/CoGoaring)
 - GitHub: [Erikrainer](https://github.com/Erikrainer/)
 - GitHub: [Urrutia Joshua](https://github.com/Joshyy55)
 - GitHub: [Kwan Gordon](https://github.com/pandord24)
-- GitHub: [Connor Goaring](https://github.com/CoGoaring)
+
 
