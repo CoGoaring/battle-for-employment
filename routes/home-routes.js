@@ -48,7 +48,11 @@ router.get("/villain/:id", withAuth, async (req, res) => {
 
     const villain = villainData.get({ plain: true });
 
-    res.render("villain", { villain, loggedIn: req.session.loggedIn});
+    res.render("villain", 
+    { 
+        villain, 
+        loggedIn: req.session.loggedIn
+    });
 
     }catch(error){
         res.status(500).json(error);
