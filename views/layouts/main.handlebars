@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battle for Employment</title>
+  <link rel="stylesheet" href="/assets/css/jass.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+
+<body>
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        <a href="/">Battle for Employment</a>
+      </h1>
+      <nav>
+        {{#if logged_in}}
+        {{!-- We don't have a working profile.js for this yet, so the handlebar is empty --}}
+        <a href="/database">database</a> |
+        <button class="no-button" id="logout">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main class="container container-fluid mt-5">
+      {{{ body }}}
+    </main>
+    <footer>
+      
+    </footer>
+  </div>
+
+  {{#if logged_in}}
+  <script src="/assets/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
