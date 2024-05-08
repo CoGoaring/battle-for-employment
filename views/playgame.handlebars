@@ -1,0 +1,20 @@
+ <h1>{{villain.villain_name}}</h1>
+<h1>{{villain.villain_description}}</h1>
+<h1>{{villain.questions.0.question}}</h1>
+
+
+<form id="villainForm" action="" method="post">
+    <input type="radio" id="choice1" name="answer" value="{{villain.questions.1.choice1}}">
+    <label for="choice1">{{villain.questions.1.choice1}}</label><br>
+
+    <input type="radio" id="choice2" name="answer" value="{{villain.questions.1.choice2}}">
+    <label for="choice2">{{villain.questions.1.choice2}}</label><br>
+
+    <input type="radio" id="choice3" name="answer" value="{{villain.questions.1.choice3}}">
+    <label for="choice3">{{villain.questions.1.choice3}}</label><br>
+
+    <input type="radio" id="choice4" name="answer" value="{{villain.questions.1.choice4}}">
+    <label for="choice4">{{villain.questions.1.choice4}}</label><br>
+
+    <input type="submit" value="Submit">
+</form>
