@@ -69,6 +69,15 @@ router.get('/database', withAuth, async (req, res) => {
     }
   });
 
+router.get("/playgame",async(req,res)=>{
+    res.render("playgame",{logged_in: req.session.logged_in,
+        username: req.session.username})
+})
+
+
+
+
+
 router.get("/login", (req, res) => {
     if(req.session.logged_in) {
         res.redirect("/");
