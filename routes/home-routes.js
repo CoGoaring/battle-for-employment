@@ -91,7 +91,8 @@ router.get("/playgame", withAuth, async (req, res) => {
         console.log(villain)
         res.render("playgame", {
             logged_in: req.session.logged_in,
-            username: req.session.username, villain: villain
+            username: req.session.username, 
+            villain: villain
         })
     } catch (error) {
         res.status(500).json({ error: error.message });
