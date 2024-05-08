@@ -81,8 +81,17 @@ body.database-background {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url('/images/databaseBackground.jpg');
+    background-image: url('/images/databaseBackground.gif');
     background-size: cover;
     background-position: center;
 }
 /*  DATABASE background for the enemies END  */
+
+body.homepage-background {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/images/homePageBackground.gif');
+    background-size: cover;
+    background-position: center;
+}
