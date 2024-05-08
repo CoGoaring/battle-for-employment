@@ -47,6 +47,28 @@ router.get("/villain/:id", withAuth, async (req, res) => {
         res.status(500).json(error);
     }
 });
+
+router.get('/database', withAuth, async (req, res) => {
+    try {
+      const villainData = await Villain.findAll({ 
+        include: [
+          {
+              model: Question,
+          },
+      ]
+    });
+    const villains = villainData.map((villain) => villain.get({ plain: true}));
+
+      res.render('database', { 
+        villains,
+        logged_in: req.session.logged_in,
+        username: req.session.username
+      });
+    } catch (error) {
+      res.status(500).json({ error: 'Internal server error' });
+    }
+  });
+
 router.get("/login", (req, res) => {
     if(req.session.logged_in) {
         res.redirect("/");

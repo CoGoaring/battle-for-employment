@@ -1,0 +1,88 @@
+/* Play Button start */
+
+.playButton {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    color: #ffffff;
+    background: linear-gradient(to right, #ff4e00, #ec9f05);
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.playButton::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+    transition: left 0.3s;
+}
+
+.playButton:hover::before {
+    left: 100%;
+}
+
+.playButton:hover {
+    background: linear-gradient(to right, #ec9f05, #ff4e00);
+}
+
+/* Play Button End */
+
+/* Villain Card Start */
+
+.villainCard {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.villainImage img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.villainInfo {
+    padding: 20px;
+}
+
+.villainName {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.villainDescription {
+    margin: 0;
+    color: #666;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/* Villain Card End Here */
+
+/* DATABASE background for the enemies START */
+body.database-background {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/images/databaseBackground.jpg');
+    background-size: cover;
+    background-position: center;
+}
+/*  DATABASE background for the enemies END  */

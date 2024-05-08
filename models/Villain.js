@@ -19,6 +19,10 @@ Villain.init({
         type:DataTypes.TEXT,
         allowNull:false,
     },
+    filename: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    }
 },
 {
     sequelize,

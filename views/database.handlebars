@@ -1,0 +1,16 @@
+{{#each villains as |villain|}}
+<body class="database-background">
+<div class="villainCard">
+    
+    <div class="villainImage">
+        <img src="/images/{{villain.filename}}" alt="{{villain.description}}">
+    </div>
+
+    <div class="villainInfo">
+        <h1 class="villainName">{{villain.villain_name}}</h1>
+        <p class="villainDescription">{{villain.villain_description}}</p>
+    </div>
+
+</div>
+</body>
+{{/each}}
