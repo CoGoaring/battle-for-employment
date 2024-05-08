@@ -1,25 +1,17 @@
 /* Play Button start */
 
 .playButton {
-    display: inline-block;
     font-size: 1.7rem;
     font-weight: bold;
-    text-align: center;
-    text-decoration: none;
     cursor: pointer;
-    border: none;
     color: #ffffff;
     background: linear-gradient(to right, #ff4e00, #ec9f05);
     position: relative;
     overflow: hidden;
-    transition: background-color 0.3s;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     background-color: #198CE6;
-    color: white;
     padding: 1rem;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
+    border-radius: 10px;
 }
 
 .playButton::before {
@@ -41,17 +33,17 @@
     background: linear-gradient(to right, #ec9f05, #ff4e00);
 }
 
-.containerGame {
+/* .containerGame {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
+
+} */
 
 .game-description {
-    font-size: 1vw;
+    text-align: center;
+    font-size: 1.5vw;
     padding: 2rem;
     color: white;
+    text-indent: 50px;
 }
 
 
