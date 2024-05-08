@@ -1,0 +1,31 @@
+<div>game page</div>
+
+{{!-- All the buttons for our different choices --}}
+<div>
+    <h1>{{villain.villain_name}}</h1>
+    <img src="/images/{{villain.filename}}" alt="{{villain.description}}">
+</div>
+<form>
+  <fieldset>
+    <legend>{{villain.questions.1.question}}</legend>
+    <div>
+        {{!-- Eventually want this to be a for loop for all choices for any given question --}}
+      <input type="radio" id="contactChoice1" name="contact" value={{villain.questions.1.choice1}} />
+      <label for="contactChoice1">{{villain.questions.1.choice1}}</label>
+
+      <input type="radio" id="contactChoice2" name="contact" value={{villain.questions.1.choice2}} />
+      <label for="contactChoice2">{{villain.questions.1.choice2}}</label>
+
+      <input type="radio" id="contactChoice3" name="contact" value={{villain.questions.1.choice3}} />
+      <label for="contactChoice3">{{villain.questions.1.choice3}}</label>
+
+      <input type="radio" id="contactChoice4" name="contact" value={{villain.questions.1.choice4}} />
+      <label for="contactChoice4">{{villain.questions.1.choice4}}</label>
+    </div>
+    <div>
+      <button type="submit" onclick = {{answer_handler villain.questions.1.answer contact}}>Submit</button>
+    </div>
+  </fieldset>
+</form>
+
+<script src="/assets/js/playgame.js"></script>
