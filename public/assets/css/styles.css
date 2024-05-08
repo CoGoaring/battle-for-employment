@@ -1,21 +1,17 @@
 /* Play Button start */
 
 .playButton {
-    display: inline-block;
-    padding: 15px 30px;
-    font-size: 20px;
+    font-size: 1.7rem;
     font-weight: bold;
-    text-align: center;
-    text-decoration: none;
     cursor: pointer;
-    border: none;
     color: #ffffff;
     background: linear-gradient(to right, #ff4e00, #ec9f05);
-    border-radius: 30px;
     position: relative;
     overflow: hidden;
-    transition: background-color 0.3s;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: #198CE6;
+    padding: 1rem;
+    border-radius: 10px;
 }
 
 .playButton::before {
@@ -36,6 +32,20 @@
 .playButton:hover {
     background: linear-gradient(to right, #ec9f05, #ff4e00);
 }
+
+/* .containerGame {
+    display: flex;
+
+} */
+
+.game-description {
+    text-align: center;
+    font-size: 1.5vw;
+    padding: 2rem;
+    color: white;
+    text-indent: 50px;
+}
+
 
 /* Play Button End */
 
@@ -80,9 +90,81 @@
 body.database-background {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('/images/databaseBackground.jpg');
+    font: 700 Raleway, sans-serif;
+    background-image: url('/images/databaseBackground.gif');
     background-size: cover;
     background-position: center;
 }
 /*  DATABASE background for the enemies END  */
+
+/* Home Page background start here */
+
+body.homepage-background {
+    margin: 0;
+    padding: 0;
+    font: 700 Raleway, sans-serif;
+    background-image: url('/images/homePageBackground.gif');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Home Page background ends here */
+
+/* Login Page background start here */
+
+body.login-background {
+    margin: 0;
+    padding: 0;
+    font: 700 Raleway, sans-serif;
+    background-image: url('/images/loginBackground.gif');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* Header title Start Here */
+
+.aTitle {
+    padding: 2rem;
+    font-size: 3vw;
+}
+
+.no-button {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.databaseTitle,
+.loginButton,
+.no-button {
+    padding: 1rem;
+    font-size: 1.5vw;
+}
+
+.no-button,
+.loginButton,
+.aTitle,
+.databaseTitle {
+    position: relative;
+    font: 700 Raleway, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px orange;
+    background: linear-gradient(#198CE6 0 100%) left / 0 
+    no-repeat;
+      color: transparent;
+      background-clip: text;
+      transition: 0.5s linear;
+
+      &:hover {
+        background-size: 100%;
+      }
+}
+
+.no-button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
