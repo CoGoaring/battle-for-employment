@@ -1,17 +1,30 @@
 /* Play Button start */
+.containerGame {
+    position: relative;
+    min-height: 80vh;
+}
 
 .playButton {
-    font-size: 1.7rem;
+    position: absolute;
+    bottom: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
     color: #ffffff;
     background: linear-gradient(to right, #ff4e00, #ec9f05);
-    position: relative;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
     background-color: #198CE6;
     padding: 1rem;
-    border-radius: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 
+    0 0 0 2px black, /* Outer border */
+    0 0 0 4px white, /* Inner border */
+    0 0 10px 4px orange inset,
+    0 0 10px 4px orange inset;
 }
 
 .playButton::before {
@@ -33,19 +46,19 @@
     background: linear-gradient(to right, #ec9f05, #ff4e00);
 }
 
-/* .containerGame {
-    display: flex;
-
-} */
-
 .game-description {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
     font-size: 1.5vw;
     padding: 2rem;
     color: white;
     text-indent: 50px;
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 
 /* Play Button End */
 
@@ -166,5 +179,3 @@ body.login-background {
     text-decoration: underline;
     cursor: pointer;
 }
-
-
