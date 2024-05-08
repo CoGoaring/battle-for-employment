@@ -1,22 +1,25 @@
 {{!-- Button to play game --}}
 <body class="homepage-background">
-<div class="col-md-6">
-    <div class="display-flex justify-space-between align-center">
-        {{!-- <button class="no-button" id="battle" action="/playgame">Battle!</button> --}}
-        <a href="/playgame" class="playButton">Play Game</a>
-    </div>
-</div>
+    <div class="containerGame">
+        <div>
+            <div class="col-md-6">
+                <div class="display-flex justify-space-between align-center">
+                    <a href="/playgame" class="playButton">Play Game</a>
+                </div>
+            </div>
 
-{{!-- Description of game here --}}
-<div class="col-md-6">
-    <section class="display-flex justify-space-between align-center"> 
-        <p>
-            Welcome to our the Battle for Employment! This is a simple multiple-choice based 
-            game where you will answer increasingly difficult questions about coding until you
-            run out of hearts. Enemies are based on the type of questions you are being asked.
-            Good luck finding a job!
-        </p>
-    </section>
-</div>
+            <div class="col-md-6">
+                <section class="display-flex justify-space-between align-center"> 
+                    <p class="game-description">
+                        Welcome to the Battle for Employment! This is a simple multiple-choice based 
+                        game where you will answer increasingly difficult questions about coding until you
+                        run out of hearts. Enemies are based on the type of questions you are being asked.
+                        Good luck finding a job!
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
 </body>
+
 <script src="/assets/js/homepage.js"></script>

@@ -11,17 +11,17 @@
 
 <body>
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <a href="/">Battle for Employment</a>
+    <header id="pageHeader" class="display-flex justify-space-between align-center p-2">
+      <h1 class="pageTitle">
+        <a class="aTitle" href="/">Battle for Employment</a>
       </h1>
       <nav>
         {{#if logged_in}}
         {{!-- We don't have a working profile.js for this yet, so the handlebar is empty --}}
-        <a href="/database">database</a> |
-        <button class="no-button" id="logout">logout</button>
+        <a class="databaseTitle" href="/database">Database</a> |
+        <button class="no-button" id="logout">Logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <a class="loginButton" href="/login">login</a>
         {{/if}}
       </nav>
     </header>
