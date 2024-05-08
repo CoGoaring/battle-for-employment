@@ -1,14 +1,13 @@
 const router = require("express").Router();
-// const redis = require('redis');
-// const client = redis.createClient();
 const { User } = require("../../models");
+
 router.post("/", async (req, res) => {
     try {
         const userData = await User.create(req.body);
         req.session.save(() => {
             req.session.username = userData.username;
             req.session.logged_in = true;
-            client.set('session_username', userData.username);
+  
             res.status(200).json(userData);
         });
     } catch (err) {
