@@ -134,6 +134,20 @@ body.login-background {
     background-position: center;
     color: white;
 }
+/* Login Page background End here */
+
+/* Playgame Page background Start here */
+
+body.playgameBackground {
+    margin: 0;
+    padding: 0;
+    font: 700 Raleway, sans-serif;
+    background-image: url('/images/playgameBackground.gif');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+/* Playgame Page background End here */
 
 /* Header title Start Here */
 
@@ -179,3 +193,153 @@ body.login-background {
     text-decoration: underline;
     cursor: pointer;
 }
+
+/* Play Game Styles Start Here*/
+
+
+.playgameBackground .villainInfo h1 {
+    font-size: 2.5vw;
+    background: #CFCFCF;
+    background: linear-gradient(to right, #CFCFCF 0%, #CF1512 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.playgameBackground .villainInfo img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+
+/* Styles for the form */
+.playgameBackground form {
+    margin-top: 20px;
+}
+
+/* Styles for fieldset */
+.playgameBackground fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+.playgameBackground label {
+    display: inline-block;
+    cursor: pointer;
+    color: black;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.playgameBackground label:hover {
+    background-color: #ddd;
+}
+
+/* Styles for selected radio buttons */
+#contactChoice1:checked + label {
+    background-color: #007bff;
+    color: #fff;
+    opacity: 1;
+}
+#contactChoice2:checked + label {
+    background-color: #007bff;
+    color: #fff;
+    opacity: 1;
+}
+#contactChoice3:checked + label {
+    background-color: #007bff;
+    color: #fff;
+    opacity: 1;
+}
+#contactChoice4:checked + label {
+    background-color: #007bff;
+    color: #fff;
+    opacity: 1;
+}
+
+/* Styles for submit button */
+#submitBtn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 
+    0 0 0 2px black,
+    0 0 0 4px white,
+    0 0 10px 4px blue inset,
+    0 0 10px 4px blue inset;
+    position: relative;
+    left: 45%
+}
+
+#submitBtn:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for the legend */
+.playgameBackground legend {
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+/* Play Game Styles End Here*/
+
+/* System message start here */
+
+.difficultText,
+.systemText {
+    font-size: 1.5vw;
+    background: #CFCFCF;
+    background: linear-gradient(to right, #CFCFCF 0%, #CFCFCF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.difficultLevel {
+    background: #CFCFCF;
+background: linear-gradient(to right, #CFCFCF 0%, #CF1512 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
