@@ -71,8 +71,10 @@ router.get('/database', withAuth, async (req, res) => {
 
 router.get("/playgame", withAuth, async (req, res) => {
     try {
-        const user = await User.findOne({username:req.session.username});
-        console.log(user)
+        const user = await User.findByPk(req.session.user_id);
+        userData=user.get({plain:true})
+        console.log(userData)
+
         const progress = user.progress;
         const gameData = await Villain.findByPk(progress, {
             include: [
@@ -88,11 +90,13 @@ router.get("/playgame", withAuth, async (req, res) => {
             return;
         }
         const villain = gameData.get({ plain: true });
-        console.log(villain)
+        // console.log(villain)
         res.render("playgame", {
             logged_in: req.session.logged_in,
             username: req.session.username, 
-            villain: villain
+            villain: villain,
+            progress:progress
+            
         })
     } catch (error) {
         res.status(500).json({ error: error.message });
