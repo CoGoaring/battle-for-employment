@@ -31,10 +31,6 @@ User.init(
       type: DataTypes.INTEGER,
       defaultValue: 1,
     },
-    health: {
-      type: DataTypes.INTEGER,
-      defaultValue: 3,
-    },
   },
   {
     hooks: {

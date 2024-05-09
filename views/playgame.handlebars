@@ -1,16 +1,19 @@
-<div>game page</div>
-
-{{!-- All the buttons for our different choices --}}
-<div>
+<body class="playgameBackground">
+<div class="villainInfo">
     <h1>{{villain.villain_name}}</h1>
     <img src="/images/{{villain.filename}}" alt="{{villain.description}}">
+    <div>
+      <p class="systemText">Wild {{villain.villain_name}} appeared!</p>
+      <p class="systemText">Answer all the questions correctly selecting the answer below to defeat the enemy!!</p>
+      <h2 class="difficultText">Enemy level: <span class="difficultLevel">{{villain.questions.1.difficult}}</span></h2>
+    </div>
 </div>
 <input type="hidden"id="progress" value ={{progress}}>
 <form>
     {{#each villain.questions}}
   <fieldset>
     <legend>{{question}}</legend>
-    <div>
+    <div class="villainQuestions">
         {{!-- Eventually want this to be a for loop for all choices for any given question --}}
       <input type="radio" id="contactChoice1" name="{{answer}}" value="{{choice1}}" />
       <label for="contactChoice1">{{choice1}}</label>
@@ -27,9 +30,9 @@
    
   </fieldset>
   {{/each}}
-   <div>
-      <button type="submit" >Submit</button>
+   <div class="questionSubmit">
+      <button type="submit" id="submitBtn" >Submit</button>
     </div>
 </form>
-
+</body>
 <script src="/assets/js/playgame.js"></script>
