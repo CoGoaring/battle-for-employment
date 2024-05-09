@@ -8,7 +8,7 @@ Prepare to engage in an epic coding showdown where your mastery of HTML, JavaScr
 
 ER Diagram:
 
-![ER Diagram Project](https://github.com/CoGoaring/project-2/assets/160955635/30f0abdd-29d0-47d5-b7e2-fd9888ab0f96)
+![Battle for employment ER](https://github.com/CoGoaring/project-2/assets/160955635/c40e4fe1-efdd-470e-aa6b-4dae8d9c592a)
 
 
 ## Table of Contents 🗒
@@ -51,6 +51,20 @@ npm run seed
 ```
 npm run start
 ```
+
+Login/Signup Page: 
+
+![Screenshot 2024-05-09 131538](https://github.com/CoGoaring/project-2/assets/160955635/55f1a2f4-eb1a-44a0-bb32-0173f6c9c7c1)
+
+Homepage:
+![Screenshot 2024-05-09 131551](https://github.com/CoGoaring/project-2/assets/160955635/3e5d249c-d52e-41da-a072-c3361566e904)
+
+Database Page:
+![Screenshot 2024-05-09 131557](https://github.com/CoGoaring/project-2/assets/160955635/719f3ea0-9360-4500-9d40-121d693ef390)
+
+Gamepage for the first enemy:
+![Screenshot 2024-05-09 131657](https://github.com/CoGoaring/project-2/assets/160955635/8430a21a-30ba-4824-90a7-87015a33b6ee)
+
 4.You need to create an account to use the Page
 
 ## License 📛 
@@ -72,9 +86,7 @@ npm run start
 
 To run tests, run these commands:
 
-
 TBD
-
 
 ## Questions
 
