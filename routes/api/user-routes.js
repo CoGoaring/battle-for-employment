@@ -7,6 +7,7 @@ router.post("/", async (req, res) => {
         req.session.save(() => {
             req.session.username = userData.username;
             req.session.logged_in = true;
+            req.session.user_id=userData.id
   
             res.status(200).json(userData);
         });
@@ -21,6 +22,7 @@ router.post("/login", async (req , res) => {
                 username: req.body.username,
             },
         });
+        console.log(userData)
         if (!userData) {
             return res.status(400).json({ error: "User not found." });
         }
@@ -31,6 +33,7 @@ router.post("/login", async (req , res) => {
         req.session.save(() => {
             req.session.username = userData.username;
             req.session.logged_in = true;
+            req.session.user_id=userData.id
             res.json({
                 user: userData,
                 message: "You are now logged in!!",
@@ -49,4 +52,15 @@ router.post("/logout", (req,res) => {
         res.status(404).json({ error: "No session found." });
     }
 });
+
+
+router.put("/",async(req,res)=>{
+    try {
+       const user=await User.update(req.body,{where:{id:req.session.user_id}}) 
+       res.status(200).json(user)
+    } catch (error) {
+        console.log(error.message)
+        res.status(500).json({ error: error.message });  
+    }
+})
 module.exports = router;
