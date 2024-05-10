@@ -321,6 +321,46 @@ background: linear-gradient(to right, #CFCFCF 0%, #CF1512 100%);
 }
 
 
+/* Victory Page Background */
+.victoryBackground {
+    margin: 0;
+    padding: 0;
+    font: 700 Raleway, sans-serif;
+    background-image: url('/images/victoryBackground.jpg');
+    background-position: center;
+    color: white;
+    text-align: center;
+}
+
+/* Victory Button Styles */
+.victoryButton {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.5vw;
+    box-shadow: 
+    0 0 0 2px black,
+    0 0 0 4px white,
+    0 0 10px 4px green inset,
+    0 0 10px 4px darkgreen inset;
+}
+
+.victoryButton:hover {
+    background-color: #45a049;
+}
+
+.victoryContainer {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 10px 20px; 
+}
+
 
 
 

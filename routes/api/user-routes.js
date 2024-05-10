@@ -22,7 +22,6 @@ router.post("/login", async (req , res) => {
                 username: req.body.username,
             },
         });
-        console.log(userData)
         if (!userData) {
             return res.status(400).json({ error: "User not found." });
         }
@@ -59,7 +58,6 @@ router.put("/",async(req,res)=>{
        const user=await User.update(req.body,{where:{id:req.session.user_id}}) 
        res.status(200).json(user)
     } catch (error) {
-        console.log(error.message)
         res.status(500).json({ error: error.message });  
     }
 })
