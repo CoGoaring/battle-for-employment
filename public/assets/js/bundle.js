@@ -4650,6 +4650,7 @@ async function handleScoring(e) {
     try {
         if (score === radios.length) {
             progress++;
+
             const response = await fetch("/api/users", {
                 method: "PUT",
                 body: JSON.stringify({ progress }),
