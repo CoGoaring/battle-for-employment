@@ -27,7 +27,7 @@ ER Diagram:
 
 ## Installations  💻
 
-Deployed link: TBD 
+Deployed link: https://battle-for-employment.onrender.com/ 
 
 To install dependencies, run these commands:
 
